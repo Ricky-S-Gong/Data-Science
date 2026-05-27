@@ -121,8 +121,8 @@ const content = [
   {
     id: "ab-testing-review",
     section: "product-sense",
-    type: "review",
-    source: "product-sense/99-review-sheets/ab-testing-answer-framework.md",
+    type: "cheatsheet",
+    source: "product-sense/99-cheatsheets/ab-testing-answer-framework.md",
     image: "",
     tags: ["review", "A/B test"],
     title: { en: "A/B Testing Review Sheet", zh: "A/B 测试速查页" },
@@ -131,12 +131,26 @@ const content = [
   {
     id: "metrics-review",
     section: "product-sense",
-    type: "review",
-    source: "product-sense/99-review-sheets/metrics-answer-framework.md",
+    type: "cheatsheet",
+    source: "product-sense/99-cheatsheets/metrics-answer-framework.md",
     image: "",
     tags: ["review", "metrics"],
     title: { en: "Metrics Review Sheet", zh: "指标题速查页" },
     summary: { en: "High-signal review sheet for metrics answers.", zh: "指标题答题速查页。" }
+  },
+  {
+    id: "product-sense-frameworks-cheatsheet",
+    section: "product-sense",
+    type: "cheatsheet",
+    source: "product-sense/99-cheatsheets/product-sense-frameworks-cheatsheet.md",
+    pdf: "product-sense/99-cheatsheets/product-sense-frameworks-cheatsheet.pdf",
+    image: "",
+    tags: ["PDF", "frameworks", "GAME", "HMMIT"],
+    title: { en: "Product Sense Frameworks PDF", zh: "产品感框架 PDF" },
+    summary: {
+      en: "A single PDF summarizing all reusable frameworks from the current lessons.",
+      zh: "一份 PDF，汇总当前课程中所有可调用的答题框架。"
+    }
   }
 ];
 
@@ -149,18 +163,18 @@ const i18n = {
     heroTitle: "Product Sense and Case Studies",
     heroCopy: "A bilingual review space for analytical PM questions, metrics frameworks, A/B testing, rubrics, and practice cases.",
     lessonsLabel: "Lessons",
-    frameworksLabel: "Frameworks",
+    cheatsheetsLabel: "Cheatsheets",
     practiceLabel: "Practice",
     tabAll: "All",
     tabLessons: "Lessons",
-    tabFrameworks: "Frameworks",
     tabPractice: "Practice",
-    tabReview: "Review Sheets",
+    tabCheatsheets: "Cheatsheets",
     open: "Open Full Note",
     comingSoon: "This section is ready for future notes.",
     imageMissing: "Original image will appear here after the asset file is added.",
     loading: "Loading the full note...",
-    sourceLabel: "Source file"
+    sourceLabel: "Source file",
+    pdfLabel: "Open PDF"
   },
   zh: {
     siteEyebrow: "公开面试知识库",
@@ -170,18 +184,18 @@ const i18n = {
     heroTitle: "产品感与案例分析",
     heroCopy: "一个中英文双语复习空间，用来整理 PM 分析题、指标框架、A/B 测试、评分标准和练习案例。",
     lessonsLabel: "课程",
-    frameworksLabel: "框架",
+    cheatsheetsLabel: "Cheatsheet",
     practiceLabel: "练习",
     tabAll: "全部",
     tabLessons: "课程",
-    tabFrameworks: "框架",
     tabPractice: "练习",
-    tabReview: "速查",
+    tabCheatsheets: "Cheatsheet",
     open: "打开完整笔记",
     comingSoon: "这个板块已预留，后续可以继续填充。",
     imageMissing: "加入原始图片文件后，这里会显示图片。",
     loading: "正在加载完整笔记...",
-    sourceLabel: "源文件"
+    sourceLabel: "源文件",
+    pdfLabel: "打开 PDF"
   }
 };
 
@@ -396,7 +410,7 @@ function renderNav() {
 
 function renderStats(items) {
   document.querySelector("#lessonCount").textContent = items.filter((item) => item.type === "lesson").length;
-  document.querySelector("#frameworkCount").textContent = items.filter((item) => item.type === "framework").length;
+  document.querySelector("#cheatsheetCount").textContent = items.filter((item) => item.type === "cheatsheet").length;
   document.querySelector("#practiceCount").textContent = items.filter((item) => item.type === "practice").length;
 }
 
@@ -460,6 +474,7 @@ async function openItem(id) {
     const markdown = await response.text();
     dialogBody.innerHTML = `
       <div class="source-link">${t("sourceLabel")}: <code>${item.source}</code></div>
+      ${item.pdf ? `<a class="pdf-link" href="${rawUrl(item.pdf)}" target="_blank" rel="noreferrer">${t("pdfLabel")}</a>` : ""}
       ${markdownToHtml(markdown, item.source)}
     `;
   } catch (error) {

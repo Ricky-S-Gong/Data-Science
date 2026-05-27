@@ -415,6 +415,17 @@ h1 {
   font-size: 0.9rem;
 }
 
+.pdf-link {
+  display: inline-flex;
+  margin: 0 0 1rem;
+  padding: 0.72rem 0.9rem;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .markdown-body {
   max-width: 920px;
   margin: 0 auto;
