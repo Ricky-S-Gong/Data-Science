@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Data Science Interview Prep</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">DS</span>
+        <div>
+          <p class="eyebrow" data-i18n="siteEyebrow">Private Interview Library</p>
+          <h1 data-i18n="siteTitle">Data Science Interview Prep</h1>
+        </div>
+      </div>
+      <div class="top-actions">
+        <div class="search-wrap">
+          <input id="searchInput" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search notes, frameworks, cases..." />
+        </div>
+        <button id="languageToggle" class="language-toggle" type="button" aria-label="Switch language">中文</button>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Interview prep sections">
+        <nav id="sectionNav" class="section-nav"></nav>
+      </aside>
+
+      <section class="content">
+        <section class="hero-panel">
+          <div>
+            <p class="eyebrow" data-i18n="heroEyebrow">Current Focus</p>
+            <h2 data-i18n="heroTitle">Product Sense and Case Studies</h2>
+            <p data-i18n="heroCopy">
+              A bilingual review space for analytical PM questions, metrics frameworks, A/B testing, rubrics, and practice cases.
+            </p>
+          </div>
+          <div class="hero-stats" aria-label="Library stats">
+            <div>
+              <strong id="lessonCount">0</strong>
+              <span data-i18n="lessonsLabel">Lessons</span>
+            </div>
+            <div>
+              <strong id="frameworkCount">0</strong>
+              <span data-i18n="frameworksLabel">Frameworks</span>
+            </div>
+            <div>
+              <strong id="practiceCount">0</strong>
+              <span data-i18n="practiceLabel">Practice</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="tabs" aria-label="Content filters">
+          <button class="tab active" type="button" data-filter="all" data-i18n="tabAll">All</button>
+          <button class="tab" type="button" data-filter="lesson" data-i18n="tabLessons">Lessons</button>
+          <button class="tab" type="button" data-filter="framework" data-i18n="tabFrameworks">Frameworks</button>
+          <button class="tab" type="button" data-filter="practice" data-i18n="tabPractice">Practice</button>
+          <button class="tab" type="button" data-filter="review" data-i18n="tabReview">Review Sheets</button>
+        </section>
+
+        <section id="cardsGrid" class="cards-grid" aria-live="polite"></section>
+      </section>
+    </main>
+
+    <dialog id="detailDialog" class="detail-dialog">
+      <div class="dialog-header">
+        <div>
+          <p id="dialogType" class="eyebrow"></p>
+          <h2 id="dialogTitle"></h2>
+        </div>
+        <button id="closeDialog" class="icon-button" type="button" aria-label="Close">×</button>
+      </div>
+      <div id="dialogBody" class="dialog-body"></div>
+    </dialog>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
