@@ -38,7 +38,7 @@ Expected paths:
 - `product-sense/assets/images/analytical-questions/metrics/whiteboard-4-metrics.png`
 - `product-sense/assets/images/analytical-questions/metrics/whiteboard-5-evaluate.png`
 
-![GAME framework](../../assets/images/analytical-questions/metrics/game-framework.png)
+![GAME framework](../../../assets/images/analytical-questions/metrics/game-framework.png)
 
 ## Core Summary
 
@@ -160,6 +160,8 @@ How to Answer Metrics Questions Framework
 
 图片一
 
+![GAME framework](../../../assets/images/analytical-questions/metrics/game-framework.png)
+
 #### 中文润色
 
 回答指标题时，Exponent 推荐使用 GAME framework。这是一个有效推进指标题的结构，能够帮助你一边展开答案，一边为最终指标选择建立清晰依据。
@@ -222,6 +224,8 @@ Let’s assume the interviewer says that you should consider Meta’s goals and 
 
 图片二
 
+![Metrics whiteboard: clarify](../../../assets/images/analytical-questions/metrics/whiteboard-1-clarify.png)
+
 #### 中文润色
 
 第一步是 Clarify。你需要先澄清题目中的模糊点，并说明自己的 assumptions。这样可以确保你在展开答案之前，方向没有偏。
@@ -278,6 +282,8 @@ Extending those concepts to Instagram, and Instagram’s Discover feed, you migh
 For now, I’ll claim that the goal of the Discover feed is “Help users develop and expand their interests."How to Answer Metrics Questions Whiteboard 2
 
 图片三
+
+![Metrics whiteboard: goals](../../../assets/images/analytical-questions/metrics/whiteboard-2-goals.png)
 
 #### 中文润色
 
@@ -380,6 +386,8 @@ Scroll for more content
 Search for related topicsHow to Answer Metrics Questions Whiteboard 3
 
 图片四
+
+![Metrics whiteboard: actions](../../../assets/images/analytical-questions/metrics/whiteboard-3-actions.png)
 
 #### 中文润色
 
@@ -534,6 +542,8 @@ Each of these options tells me something slightly different. Returning to my sta
 
 图片五
 
+![Metrics whiteboard: metrics](../../../assets/images/analytical-questions/metrics/whiteboard-4-metrics.png)
+
 #### 中文润色
 
 第四步是 Metrics。识别出关键用户行为之后，就要建立一组相关指标来追踪这些行为。
@@ -602,6 +612,8 @@ Wrap up your answer by evaluating your choice:
 Ideally, I would like to couple time spent with a counter metric that measures a user's engagement in the content such as likes or creators followed from the Discover feed."How to Answer Metrics Questions Whiteboard 5
 
 图片六
+
+![Metrics whiteboard: evaluate](../../../assets/images/analytical-questions/metrics/whiteboard-5-evaluate.png)
 
 #### 中文润色
 
@@ -691,4 +703,3 @@ Make sure your metric actually gives you the information you need. A small featu
 ## Tags
 
 metrics, game-framework, north-star-metric, kpi, okr, analytical-questions, product-sense
-

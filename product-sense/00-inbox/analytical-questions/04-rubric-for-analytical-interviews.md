@@ -25,7 +25,7 @@ Expected path:
 
 - `product-sense/assets/images/analytical-questions/rubrics/analytical-rubric.png`
 
-![Analytical Rubric](../../assets/images/analytical-questions/rubrics/analytical-rubric.png)
+![Analytical Rubric](../../../assets/images/analytical-questions/rubrics/analytical-rubric.png)
 
 ## Core Summary
 
@@ -352,4 +352,3 @@ PM 必须具备良好的问题解决意识，而这需要 curiosity。面试官�
 ## Tags
 
 analytical-interviews, rubric, data-literacy, metrics, diagnosis, prioritization, execution, communication, collaboration, curiosity
-
