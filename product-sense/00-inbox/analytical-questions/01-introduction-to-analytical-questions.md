@@ -1,0 +1,225 @@
+# Introduction to Analytical Questions
+
+## 中文标题
+
+分析类 PM 面试题简介
+
+## Source
+
+Exponent lesson: Introduction to Analytical Questions
+
+## Abbreviations and Terms
+
+- PM: Product Manager，产品经理。
+- A/B test: A/B testing，对照实验。通常把用户随机分成 control group 和 treatment group，比较不同产品方案的效果。
+- TAM: Total Addressable Market，总可服务市场规模，表示某产品或业务理论上可覆盖的整体市场机会。
+- DAU: Daily Active Users，日活跃用户数。
+- Metrics: 指标，用来衡量产品健康度、用户行为、业务目标或实验结果。
+- North star metric: 北极星指标，最能代表产品长期用户价值和业务方向的核心指标。
+- GAME framework: Exponent 后续课程中用于回答指标题的框架。这里先保留名称，等后续课程出现具体定义时再补全。
+
+## Core Summary
+
+Analytical PM interview questions test whether you can break down problems, set goals, reason with data, and make logically justified decisions. Strong answers should not stop at metrics or calculations. They should connect the analysis back to product context, user needs, business goals, and strategic tradeoffs.
+
+分析类 PM 面试题考察的是：你能否拆解问题、设定目标、理解数据，并用清晰的逻辑支撑决策。优秀答案不能只停留在“列指标”或“做计算”，还要把分析放回产品场景中，体现你对用户、业务目标和战略取舍的理解。
+
+## Original and Refined Notes
+
+### Opening Definition
+
+#### Original
+
+Analytical PM interview questions are squarely left-brain-type exercises.
+
+They’re designed to test your ability to break down problems, set goals, think about data, and use logical reasoning. For these questions especially, having a clear structure and solid justifications for your decisions is crucial.
+
+Interviewers want to see you apply these skills within a larger context that reflects the on-the-job experience of a PM, so a great answer will incorporate product sense or strategic understanding as well.
+
+#### 中文润色
+
+分析类 PM 面试题非常偏“左脑型”思考，强调结构、逻辑、数据和推理。
+
+这类题的目的，是测试你能否拆解问题、设定目标、理解数据，并通过逻辑推理得出决策。尤其是在分析类问题中，清晰的回答结构和有说服力的决策依据非常关键。
+
+面试官并不只是想看你会不会分析数据。他们更想看到你能否把这些能力放到真实 PM 工作的语境里使用。因此，一个好的答案还应该体现产品感和战略理解。
+
+#### 复习注解
+
+这段的重点是：分析题不是纯数据题，而是“用数据和结构支撑产品判断”的题。回答时要同时展示：
+
+- 结构化拆解能力
+- 指标和数据意识
+- 产品场景理解
+- 决策理由和 tradeoff
+
+### What to Expect
+
+#### Original
+
+Common types of analytical questions include the following:
+
+#### 中文润色
+
+常见的分析类 PM 面试题主要包括以下几种。
+
+### 1. Metrics Questions
+
+#### Original
+
+Metrics can tell you whether you’re on or off-track as a PM — but only if you choose the right ones for the situation at hand. Metrics questions test your ability to reason about and apply metrics. They are the most common type of analytical question. Example questions include:
+
+“If you were PM for Lyft, what metrics would you use to track the health of the app?”
+
+“Define a north star metric for Airbnb.”
+
+“How do you define success metrics?”
+
+This module includes a brief review of common metrics and a walk-through of the GAME framework for answering these questions.
+
+#### 中文润色
+
+指标可以帮助 PM 判断产品是否走在正确方向上，但前提是你必须根据当前场景选择正确的指标。指标题考察的是你是否能理解指标、应用指标，并用指标支撑产品判断。它们是分析类问题中最常见的一类。
+
+示例问题：
+
+- 如果你是 Lyft 的 PM，你会用哪些指标来追踪这个 app 的健康状况？
+- 为 Airbnb 定义一个北极星指标。
+- 你会如何定义成功指标？
+
+这个模块会简要回顾常见指标，并讲解如何用 GAME framework 回答这类问题。
+
+#### 复习注解
+
+指标题的核心不是列越多指标越好，而是说明：
+
+- 当前产品目标是什么
+- 哪个指标最能代表目标
+- 哪些输入指标解释 north star metric 的变化
+- 哪些 guardrail metrics 防止局部优化伤害整体体验
+- 为什么这些指标适合这个产品场景
+
+### 2. A/B Testing Questions
+
+#### Original
+
+Experimentation is a large part of a PM’s job, and A/B tests are invaluable for gaining insights into user behavior. A/B testing interview questions assess your ability to design and run experiments, interpret the results, and make data-driven decisions.
+
+Example questions include:
+
+“What experiments would you run on Google’s homepage to increase search queries?”
+
+“Devise an A/B test to improve user frustration with Google Maps.”
+
+“How would you A/B test a dynamic pricing model for Lyft?”
+
+We’ll cover an approach to answering A/B testing questions that’ll help you design an experiment, choose the right metrics to track, interpret the results, and identify next steps with ease.
+
+#### 中文润色
+
+实验是 PM 工作中很重要的一部分，而 A/B 测试对于理解用户行为尤其有价值。A/B 测试类面试题会考察你是否能设计并运行实验、解读实验结果，并基于数据做出决策。
+
+示例问题：
+
+- 你会在 Google 首页上做哪些实验来提高搜索查询量？
+- 设计一个 A/B 测试，以减少用户在使用 Google Maps 时的挫败感。
+- 你会如何为 Lyft 的动态定价模型设计 A/B 测试？
+
+课程后续会介绍一种回答 A/B 测试题的方法，帮助你设计实验、选择合适的追踪指标、解读结果，并明确下一步行动。
+
+#### 复习注解
+
+A/B 测试题通常需要讲清楚：
+
+- Hypothesis: 你要验证什么假设
+- User population: 哪些用户进入实验
+- Control and treatment: 对照组和实验组分别看到什么
+- Success metrics: 用什么判断实验成功
+- Guardrail metrics: 哪些指标不能被伤害
+- Interpretation: 结果出现不同情况时如何解读
+- Next steps: 上线、继续实验、回滚还是深入分析
+
+### 3. Estimation Questions
+
+#### Original
+
+Estimation questions assess your ability to break down ambiguous problems, make reasonable assumptions, and get a general sense of scale. Not every company asks estimation questions, but even if you won’t face them, estimation is a valuable skill to practice and use as a tool in other interviews and on the job — for instance, when sizing a market opportunity you identified in a product strategy question. Example estimation questions include:
+
+“Estimate the market size for driverless cars in 2025.”
+
+“What’s the TAM of Slack?”
+
+“How much does it cost to run YouTube for a day?”
+
+Tip
+
+Exponent offers a separate module on estimation questions.
+
+#### 中文润色
+
+估算题考察你能否拆解模糊问题、提出合理假设，并对规模形成大致判断。并不是每家公司都会问估算题，但即使你不会在面试中直接遇到，它仍然是一项值得练习的能力。
+
+估算能力可以作为其他面试和实际工作中的工具。例如，在产品战略题中，当你识别出一个市场机会时，往往需要估算这个机会的规模。
+
+示例问题：
+
+- 估算 2025 年无人驾驶汽车的市场规模。
+- Slack 的 TAM 是多少？
+- 运营 YouTube 一天大约需要多少成本？
+
+提示：Exponent 对估算题有单独的模块。
+
+#### 复习注解
+
+估算题的目标不是得到精确答案，而是展示：
+
+- 如何拆问题
+- 假设是否合理
+- 数学是否清楚
+- 量级是否可信
+- 最后能否做 sanity check
+- 估算结果和产品/商业判断有什么关系
+
+### 4. Execution Questions
+
+#### Original
+
+Execution questions assess your ability to solve problems. These questions vary significantly from company to company, and they rarely come up in analytical interviews, though Meta is notorious for asking analytical/execution questions like “Friend requests on Facebook are down 10%. What would you do?” Other example questions include:
+
+“As the PM for Facebook Messenger, you’ve noticed that DAU has gone down significantly. How would you diagnose this issue?”
+
+“You’re the PM at a food delivery company and delivery time has increased. What would you do?”
+
+“As a PM at Stripe, one of the merchants is noticing an increase in fraud. How would you solve this problem?”
+
+#### 中文润色
+
+执行类问题考察的是你解决问题的能力。这类问题在不同公司之间差异很大，而且在分析类面试中并不算特别常见。不过 Meta 很常问分析/执行结合的问题，比如：“Facebook 上的好友请求下降了 10%，你会怎么做？”
+
+其他示例问题包括：
+
+- 作为 Facebook Messenger 的 PM，你发现 DAU 明显下降。你会如何诊断这个问题？
+- 你是一家外卖公司的 PM，现在配送时间变长了。你会怎么做？
+- 作为 Stripe 的 PM，你发现某个商户的欺诈行为增加了。你会如何解决？
+
+#### 复习注解
+
+执行题通常是“指标异常诊断”或“业务问题解决”。回答时可以强调：
+
+- Clarify: 确认指标定义、下降幅度、时间范围、影响范围
+- Segment: 按用户、地区、平台、渠道、版本、时间等维度切分
+- Validate: 排除数据埋点、日志、统计口径问题
+- Diagnose: 区分内部产品改动、外部市场因素、季节性、竞争、系统问题
+- Prioritize: 找最可能、影响最大的原因先查
+- Act: 给出短期止损和长期解决方案
+
+## Key Takeaway
+
+Analytical questions are structured product judgment questions. The interviewer wants to see whether you can combine data, logic, product context, and strategic thinking into a clear recommendation.
+
+分析类问题本质上是结构化的产品判断题。面试官想看到的是：你能否把数据、逻辑、产品场景和战略思考结合起来，给出清晰、有依据的判断。
+
+## Tags
+
+analytical-questions, metrics, ab-testing, estimation, execution, product-sense
+
