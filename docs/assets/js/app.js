@@ -1,5 +1,5 @@
 const REPO_RAW_BASE = "https://raw.githubusercontent.com/Ricky-S-Gong/Data-Science/main/";
-const ASSET_VERSION = "20260527-uber-pickup-v1";
+const ASSET_VERSION = "20260527-slack-connect-v1";
 
 const sections = [
   {
@@ -164,6 +164,22 @@ const content = [
     summary: {
       en: "Practice case for ranking variables Uber could use beyond Google Maps ETA to estimate passenger pickup time.",
       zh: "练习案例：排序 Uber 在 Google Maps ETA 之外可用于估算接客时间的关键变量。"
+    }
+  },
+  {
+    id: "slack-connect-success-metrics",
+    section: "product-sense",
+    type: "practice",
+    source: {
+      en: "product-sense/02-question-bank/metrics/measure-success-for-slack-connect.en.md",
+      zh: "product-sense/02-question-bank/metrics/measure-success-for-slack-connect.zh.md"
+    },
+    image: "",
+    tags: ["Slack", "metrics", "launch"],
+    title: { en: "Measure Success for Slack Connect", zh: "衡量 Slack Connect 的成功标准" },
+    summary: {
+      en: "Practice case for launching Slack Connect and choosing a North Star, supporting metrics, and guardrails.",
+      zh: "练习案例：为 Slack Connect 设计发布策略、北极星指标、补充指标和护栏指标。"
     }
   },
   {
