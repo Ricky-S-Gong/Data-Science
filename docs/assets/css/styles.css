@@ -337,7 +337,6 @@ h1 {
   padding: 0.72rem 0.8rem;
   background: var(--ink);
   color: white;
-  pointer-events: none;
 }
 
 .content.reading-mode .hero-panel,

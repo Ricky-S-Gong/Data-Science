@@ -1,5 +1,5 @@
 const REPO_RAW_BASE = "https://raw.githubusercontent.com/Ricky-S-Gong/Data-Science/main/";
-const ASSET_VERSION = "20260527-full-reader";
+const ASSET_VERSION = "20260527-reader-v2";
 
 const sections = [
   {
@@ -463,7 +463,7 @@ function renderCards() {
         <h3>${item.title[lang]}</h3>
         <p>${item.summary[lang]}</p>
         <div class="tag-row">${item.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
-        <button type="button">${t("open")}</button>
+        <button type="button" data-open="${item.id}">${t("open")}</button>
       </div>
     </article>
   `).join("");
@@ -476,6 +476,9 @@ async function openItem(id) {
   readerTitle.textContent = item.title[lang];
   readerBody.innerHTML = `<p>${t("loading")}</p>`;
   contentPane.classList.add("reading-mode");
+  heroPanel.hidden = true;
+  tabs.hidden = true;
+  grid.hidden = true;
   readerPane.hidden = false;
   window.location.hash = `note=${item.id}`;
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -497,6 +500,9 @@ async function openItem(id) {
 function closeReader() {
   readerPane.hidden = true;
   contentPane.classList.remove("reading-mode");
+  heroPanel.hidden = false;
+  tabs.hidden = false;
+  grid.hidden = false;
   if (window.location.hash.startsWith("#note=")) {
     history.pushState("", document.title, window.location.pathname + window.location.search);
   }
