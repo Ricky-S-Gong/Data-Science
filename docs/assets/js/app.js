@@ -1,5 +1,5 @@
 const REPO_RAW_BASE = "https://raw.githubusercontent.com/Ricky-S-Gong/Data-Science/main/";
-const ASSET_VERSION = "20260527-slack-connect-v1";
+const ASSET_VERSION = "20260527-email-campaign-ab-v1";
 
 const sections = [
   {
@@ -54,6 +54,22 @@ const sections = [
 ];
 
 const content = [
+  {
+    id: "email-campaign-ab-test",
+    section: "stats-experimentation",
+    type: "practice",
+    source: {
+      en: "statistics-experimentation/02-question-bank/ab-testing/ab-testing-email-campaign.en.md",
+      zh: "statistics-experimentation/02-question-bank/ab-testing/ab-testing-email-campaign.zh.md"
+    },
+    image: "",
+    tags: ["A/B test", "z-test", "conversion"],
+    title: { en: "A/B Testing Email Campaign", zh: "A/B 测试邮件营销活动" },
+    summary: {
+      en: "Statistics practice for testing whether an UberEats email campaign increases signup conversion.",
+      zh: "统计实验练习：检验 UberEats 邮件营销活动是否提升注册转化率。"
+    }
+  },
   {
     id: "analytical-overview",
     section: "product-sense",
