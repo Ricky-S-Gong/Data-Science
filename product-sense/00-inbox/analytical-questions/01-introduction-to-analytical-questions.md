@@ -4,10 +4,6 @@
 
 分析类 PM 面试题简介
 
-## Source
-
-Exponent lesson: Introduction to Analytical Questions
-
 ## Abbreviations and Terms
 
 - PM: Product Manager，产品经理。

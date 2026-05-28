@@ -479,7 +479,7 @@ h1 {
   background: #fff;
 }
 
-.image-placeholder {
+.image-error {
   color: var(--muted);
   text-align: center;
   font-weight: 750;

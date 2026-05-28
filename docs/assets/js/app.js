@@ -1,5 +1,5 @@
 const REPO_RAW_BASE = "https://raw.githubusercontent.com/Ricky-S-Gong/Data-Science/main/";
-const ASSET_VERSION = "20260527-assets-v1";
+const ASSET_VERSION = "20260527-localized-v1";
 
 const sections = [
   {
@@ -58,20 +58,26 @@ const content = [
     id: "analytical-overview",
     section: "product-sense",
     type: "lesson",
-    source: "product-sense/00-inbox/analytical-questions/01-introduction-to-analytical-questions.md",
+    source: {
+      en: "product-sense/00-inbox/analytical-questions/01-introduction-to-analytical-questions.en.md",
+      zh: "product-sense/00-inbox/analytical-questions/01-introduction-to-analytical-questions.zh.md"
+    },
     image: "",
     tags: ["analytical", "PM", "overview"],
     title: { en: "Introduction to Analytical Questions", zh: "分析类 PM 面试题简介" },
     summary: {
       en: "Full lesson note with original text, refined Chinese, terms, and review notes.",
-      zh: "完整课程笔记，包含英文原文、中文润色、术语解释和复习注解。"
+      zh: "完整课程笔记，包含中文润色、术语解释和复习注解。"
     }
   },
   {
     id: "ab-testing-framework",
     section: "product-sense",
     type: "lesson",
-    source: "product-sense/00-inbox/analytical-questions/02-how-to-answer-ab-testing-questions.md",
+    source: {
+      en: "product-sense/00-inbox/analytical-questions/02-how-to-answer-ab-testing-questions.en.md",
+      zh: "product-sense/00-inbox/analytical-questions/02-how-to-answer-ab-testing-questions.zh.md"
+    },
     image: "product-sense/assets/images/analytical-questions/how-to-answer-ab-testing-questions.png",
     tags: ["A/B test", "experimentation", "HMMIT"],
     title: { en: "How to Answer A/B Testing Questions", zh: "如何回答 A/B 测试类问题" },
@@ -84,7 +90,10 @@ const content = [
     id: "metrics-game",
     section: "product-sense",
     type: "lesson",
-    source: "product-sense/00-inbox/analytical-questions/03-how-to-answer-metrics-questions.md",
+    source: {
+      en: "product-sense/00-inbox/analytical-questions/03-how-to-answer-metrics-questions.en.md",
+      zh: "product-sense/00-inbox/analytical-questions/03-how-to-answer-metrics-questions.zh.md"
+    },
     image: "product-sense/assets/images/analytical-questions/metrics/game-framework.png",
     tags: ["metrics", "GAME", "north star"],
     title: { en: "How to Answer Metrics Questions", zh: "如何回答指标类问题" },
@@ -97,7 +106,10 @@ const content = [
     id: "analytical-rubric",
     section: "product-sense",
     type: "lesson",
-    source: "product-sense/00-inbox/analytical-questions/04-rubric-for-analytical-interviews.md",
+    source: {
+      en: "product-sense/00-inbox/analytical-questions/04-rubric-for-analytical-interviews.en.md",
+      zh: "product-sense/00-inbox/analytical-questions/04-rubric-for-analytical-interviews.zh.md"
+    },
     image: "product-sense/assets/images/analytical-questions/rubrics/analytical-rubric.png",
     tags: ["rubric", "communication", "diagnosis"],
     title: { en: "Rubric for Analytical Interviews", zh: "分析类面试评分标准" },
@@ -110,7 +122,10 @@ const content = [
     id: "youtube-key-metrics",
     section: "product-sense",
     type: "practice",
-    source: "product-sense/02-question-bank/metrics/pick-youtubes-key-metrics.md",
+    source: {
+      en: "product-sense/02-question-bank/metrics/pick-youtubes-key-metrics.en.md",
+      zh: "product-sense/02-question-bank/metrics/pick-youtubes-key-metrics.zh.md"
+    },
     image: "product-sense/assets/images/analytical-questions/exercises/youtube-key-metrics.png",
     tags: ["YouTube", "metrics", "engagement"],
     title: { en: "Pick YouTube's Key Metrics", zh: "选择 YouTube 的关键指标" },
@@ -123,7 +138,10 @@ const content = [
     id: "ab-testing-review",
     section: "product-sense",
     type: "cheatsheet",
-    source: "product-sense/99-cheatsheets/ab-testing-answer-framework.md",
+    source: {
+      en: "product-sense/99-cheatsheets/ab-testing-answer-framework.en.md",
+      zh: "product-sense/99-cheatsheets/ab-testing-answer-framework.zh.md"
+    },
     image: "",
     tags: ["review", "A/B test"],
     title: { en: "A/B Testing Review Sheet", zh: "A/B 测试速查页" },
@@ -133,7 +151,10 @@ const content = [
     id: "metrics-review",
     section: "product-sense",
     type: "cheatsheet",
-    source: "product-sense/99-cheatsheets/metrics-answer-framework.md",
+    source: {
+      en: "product-sense/99-cheatsheets/metrics-answer-framework.en.md",
+      zh: "product-sense/99-cheatsheets/metrics-answer-framework.zh.md"
+    },
     image: "",
     tags: ["review", "metrics"],
     title: { en: "Metrics Review Sheet", zh: "指标题速查页" },
@@ -143,7 +164,10 @@ const content = [
     id: "product-sense-frameworks-cheatsheet",
     section: "product-sense",
     type: "cheatsheet",
-    source: "product-sense/99-cheatsheets/product-sense-frameworks-cheatsheet.md",
+    source: {
+      en: "product-sense/99-cheatsheets/product-sense-frameworks-cheatsheet.en.md",
+      zh: "product-sense/99-cheatsheets/product-sense-frameworks-cheatsheet.zh.md"
+    },
     pdf: "product-sense/99-cheatsheets/product-sense-frameworks-cheatsheet.pdf",
     image: "",
     tags: ["PDF", "frameworks", "GAME", "HMMIT"],
@@ -171,9 +195,8 @@ const i18n = {
     tabCheatsheets: "Cheatsheets",
     open: "Open Full Note",
     comingSoon: "This section is ready for future notes.",
-    imageMissing: "Original image will appear here after the asset file is added.",
+    imageMissing: "Image failed to load.",
     loading: "Loading the full note...",
-    sourceLabel: "Source file",
     pdfLabel: "Open PDF"
     ,
     backToLibrary: "Back to library"
@@ -193,9 +216,8 @@ const i18n = {
     tabCheatsheets: "Cheatsheet",
     open: "打开完整笔记",
     comingSoon: "这个板块已预留，后续可以继续填充。",
-    imageMissing: "加入原始图片文件后，这里会显示图片。",
+    imageMissing: "图片加载失败。",
     loading: "正在加载完整笔记...",
-    sourceLabel: "源文件",
     pdfLabel: "打开 PDF",
     backToLibrary: "返回目录"
   }
@@ -259,13 +281,17 @@ function resolveImageUrl(basePath, relativePath) {
   return versionedRawUrl(resolveRepoPath(basePath, relativePath));
 }
 
+function sourceFor(item) {
+  return typeof item.source === "string" ? item.source : item.source[lang];
+}
+
 function renderInline(text, basePath) {
   let safe = escapeHtml(text);
   safe = safe.replace(/`([^`]+)`/g, "<code>$1</code>");
   safe = safe.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   safe = safe.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_, alt, src) => {
     const url = resolveImageUrl(basePath, src);
-    return `<img src="${url}" alt="${escapeHtml(alt)}" onerror="this.replaceWith(Object.assign(document.createElement('div'), {className: 'image-placeholder inline-missing', textContent: '${t("imageMissing")}'}))" />`;
+    return `<img src="${url}" alt="${escapeHtml(alt)}" onerror="this.replaceWith(Object.assign(document.createElement('div'), {className: 'image-error inline-missing', textContent: '${t("imageMissing")}'}))" />`;
   });
   safe = safe.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noreferrer">$1</a>');
   return safe;
@@ -464,6 +490,7 @@ function renderCards() {
 async function openItem(id) {
   const item = content.find((entry) => entry.id === id);
   if (!item) return;
+  const source = sourceFor(item);
   readerType.textContent = item.type;
   readerTitle.textContent = item.title[lang];
   readerBody.innerHTML = `<p>${t("loading")}</p>`;
@@ -476,13 +503,12 @@ async function openItem(id) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 
   try {
-    const response = await fetch(versionedRawUrl(item.source), { cache: "no-store" });
-    if (!response.ok) throw new Error(`Unable to load ${item.source}`);
+    const response = await fetch(versionedRawUrl(source), { cache: "no-store" });
+    if (!response.ok) throw new Error(`Unable to load ${source}`);
     const markdown = await response.text();
     readerBody.innerHTML = `
-      <div class="source-link">${t("sourceLabel")}: <code>${item.source}</code></div>
       ${item.pdf ? `<a class="pdf-link" href="${versionedRawUrl(item.pdf)}" target="_blank" rel="noreferrer">${t("pdfLabel")}</a>` : ""}
-      ${markdownToHtml(markdown, item.source)}
+      ${markdownToHtml(markdown, source)}
     `;
   } catch (error) {
     readerBody.innerHTML = `<div class="callout note"><strong>Load error</strong><p>${escapeHtml(error.message)}</p></div>`;
@@ -554,6 +580,10 @@ searchInput.addEventListener("input", (event) => {
 languageToggle.addEventListener("click", () => {
   lang = lang === "en" ? "zh" : "en";
   render();
+  if (!readerPane.hidden) {
+    const id = window.location.hash.replace("#note=", "");
+    if (id) openItem(id);
+  }
 });
 
 backToLibrary.addEventListener("click", closeReader);

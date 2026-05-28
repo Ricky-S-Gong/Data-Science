@@ -4,10 +4,6 @@
 
 如何回答 A/B 测试类问题
 
-## Source
-
-Exponent lesson: How to Answer A/B Testing Questions
-
 ## Abbreviations and Terms
 
 - A/B test: A/B testing，对照实验。通常将用户随机分为 control group 和 treatment group，比较不同产品方案对用户行为和业务指标的影响。
@@ -21,11 +17,7 @@ Exponent lesson: How to Answer A/B Testing Questions
 
 ## Framework From The Image
 
-Image asset:
-
 ![How to Answer A/B Testing Questions](../../assets/images/analytical-questions/how-to-answer-ab-testing-questions.png)
-
-Note: use the original image provided with this lesson for the future website. If the image is not yet present in the repo, place it at `product-sense/assets/images/analytical-questions/how-to-answer-ab-testing-questions.png`.
 
 How to Answer A/B Testing Questions:
 
