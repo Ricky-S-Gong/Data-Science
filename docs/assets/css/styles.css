@@ -247,6 +247,45 @@ h1 {
   gap: 1rem;
 }
 
+.cards-grid.grouped-grid {
+  display: block;
+}
+
+.track-section {
+  margin-bottom: 1.2rem;
+}
+
+.track-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 0.65rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--accent);
+  border-radius: 8px;
+  background: rgba(255, 253, 246, 0.72);
+}
+
+.track-heading span {
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 850;
+}
+
+.track-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -274,12 +313,28 @@ h1 {
   padding: 1rem;
 }
 
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
 .type-pill {
   align-self: flex-start;
   padding: 0.25rem 0.5rem;
   border-radius: 999px;
   background: var(--concept);
   color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.track-pill {
+  align-self: flex-start;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: #e7efe3;
+  color: #405f2e;
   font-size: 0.75rem;
   font-weight: 800;
 }

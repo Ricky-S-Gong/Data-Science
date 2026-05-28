@@ -1,5 +1,22 @@
 const REPO_RAW_BASE = "https://raw.githubusercontent.com/Ricky-S-Gong/Data-Science/main/";
-const ASSET_VERSION = "20260528-instagram-dau-drop-v1";
+const ASSET_VERSION = "20260528-product-design-intro-v1";
+
+const productSenseTracks = [
+  {
+    id: "analytical",
+    en: "Analytical Questions",
+    zh: "分析性问题",
+    enDesc: "Metrics, A/B testing, diagnosis, execution, and analytical cases.",
+    zhDesc: "指标、A/B 测试、诊断、执行和分析类案例。"
+  },
+  {
+    id: "product-design",
+    en: "Product Design Questions",
+    zh: "产品设计问题",
+    enDesc: "User empathy, pain points, product vision, solutions, and strategy.",
+    zhDesc: "用户同理心、痛点、产品愿景、解决方案和战略。"
+  }
+];
 
 const sections = [
   {
@@ -34,8 +51,8 @@ const sections = [
     id: "product-sense",
     en: "Product Sense and Case Studies",
     zh: "产品感与案例分析",
-    enDesc: "PM analytical questions, metrics, rubrics, and case practice.",
-    zhDesc: "PM 分析题、指标、评分标准和案例练习。"
+    enDesc: "Analytical questions plus product design, vision, and case practice.",
+    zhDesc: "分析性问题，以及产品设计、愿景和案例练习。"
   },
   {
     id: "ml-coding",
@@ -73,6 +90,7 @@ const content = [
   {
     id: "analytical-overview",
     section: "product-sense",
+    track: "analytical",
     type: "lesson",
     source: {
       en: "product-sense/00-inbox/analytical-questions/01-introduction-to-analytical-questions.en.md",
@@ -89,6 +107,7 @@ const content = [
   {
     id: "ab-testing-framework",
     section: "product-sense",
+    track: "analytical",
     type: "lesson",
     source: {
       en: "product-sense/00-inbox/analytical-questions/02-how-to-answer-ab-testing-questions.en.md",
@@ -105,6 +124,7 @@ const content = [
   {
     id: "metrics-game",
     section: "product-sense",
+    track: "analytical",
     type: "lesson",
     source: {
       en: "product-sense/00-inbox/analytical-questions/03-how-to-answer-metrics-questions.en.md",
@@ -121,6 +141,7 @@ const content = [
   {
     id: "analytical-rubric",
     section: "product-sense",
+    track: "analytical",
     type: "lesson",
     source: {
       en: "product-sense/00-inbox/analytical-questions/04-rubric-for-analytical-interviews.en.md",
@@ -137,6 +158,7 @@ const content = [
   {
     id: "youtube-key-metrics",
     section: "product-sense",
+    track: "analytical",
     type: "practice",
     source: {
       en: "product-sense/02-question-bank/metrics/pick-youtubes-key-metrics.en.md",
@@ -153,6 +175,7 @@ const content = [
   {
     id: "google-homepage-ab-test",
     section: "product-sense",
+    track: "analytical",
     type: "practice",
     source: {
       en: "product-sense/02-question-bank/ab-testing/ab-test-googles-homepage.en.md",
@@ -169,6 +192,7 @@ const content = [
   {
     id: "uber-passenger-pickup-variables",
     section: "product-sense",
+    track: "analytical",
     type: "practice",
     source: {
       en: "product-sense/02-question-bank/metrics/ubers-passenger-pickup-variables.en.md",
@@ -185,6 +209,7 @@ const content = [
   {
     id: "slack-connect-success-metrics",
     section: "product-sense",
+    track: "analytical",
     type: "practice",
     source: {
       en: "product-sense/02-question-bank/metrics/measure-success-for-slack-connect.en.md",
@@ -201,6 +226,7 @@ const content = [
   {
     id: "improving-facebook-dau",
     section: "product-sense",
+    track: "analytical",
     type: "practice",
     source: {
       en: "product-sense/02-question-bank/metrics/improving-facebooks-dau.en.md",
@@ -217,6 +243,7 @@ const content = [
   {
     id: "diagnosing-instagram-dau-drop",
     section: "product-sense",
+    track: "analytical",
     type: "practice",
     source: {
       en: "product-sense/02-question-bank/metrics/diagnosing-instagram-dau-drop.en.md",
@@ -231,8 +258,26 @@ const content = [
     }
   },
   {
+    id: "product-design-overview",
+    section: "product-sense",
+    track: "product-design",
+    type: "lesson",
+    source: {
+      en: "product-sense/00-inbox/product-design-questions/01-introduction-to-product-design-questions.en.md",
+      zh: "product-sense/00-inbox/product-design-questions/01-introduction-to-product-design-questions.zh.md"
+    },
+    image: "",
+    tags: ["product design", "Product Sense", "users"],
+    title: { en: "Introduction to Product Design Questions", zh: "产品设计相关问题介绍" },
+    summary: {
+      en: "First product design lesson covering question types, interviewer expectations, and what separates okay, good, and great answers.",
+      zh: "产品设计第一课：题型、面试官考察点，以及可以、不错、很棒答案的区别。"
+    }
+  },
+  {
     id: "ab-testing-review",
     section: "product-sense",
+    track: "analytical",
     type: "cheatsheet",
     source: {
       en: "product-sense/99-cheatsheets/ab-testing-answer-framework.en.md",
@@ -246,6 +291,7 @@ const content = [
   {
     id: "metrics-review",
     section: "product-sense",
+    track: "analytical",
     type: "cheatsheet",
     source: {
       en: "product-sense/99-cheatsheets/metrics-answer-framework.en.md",
@@ -259,6 +305,7 @@ const content = [
   {
     id: "product-sense-frameworks-cheatsheet",
     section: "product-sense",
+    track: "analytical",
     type: "cheatsheet",
     source: {
       en: "product-sense/99-cheatsheets/product-sense-frameworks-cheatsheet.en.md",
@@ -282,7 +329,7 @@ const i18n = {
     searchPlaceholder: "Search notes, frameworks, cases...",
     heroEyebrow: "Current Focus",
     heroTitle: "Product Sense and Case Studies",
-    heroCopy: "A bilingual review space for analytical PM questions, metrics frameworks, A/B testing, rubrics, and practice cases.",
+    heroCopy: "A bilingual review space for Product Sense, now organized into Analytical Questions and Product Design Questions.",
     lessonsLabel: "Lessons",
     cheatsheetsLabel: "Cheatsheets",
     practiceLabel: "Practice",
@@ -303,7 +350,7 @@ const i18n = {
     searchPlaceholder: "搜索笔记、框架、案例...",
     heroEyebrow: "当前重点",
     heroTitle: "产品感与案例分析",
-    heroCopy: "一个中英文双语复习空间，用来整理 PM 分析题、指标框架、A/B 测试、评分标准和练习案例。",
+    heroCopy: "一个中英文双语复习空间，把 Product Sense 拆成分析性问题和产品设计问题两条线。",
     lessonsLabel: "课程",
     cheatsheetsLabel: "Cheatsheet",
     practiceLabel: "练习",
@@ -379,6 +426,34 @@ function resolveImageUrl(basePath, relativePath) {
 
 function sourceFor(item) {
   return typeof item.source === "string" ? item.source : item.source[lang];
+}
+
+function trackFor(item) {
+  if (item.section !== "product-sense") return null;
+  return productSenseTracks.find((track) => track.id === item.track) || productSenseTracks[0];
+}
+
+function trackLabel(item) {
+  const track = trackFor(item);
+  return track ? track[lang] : "";
+}
+
+function cardHtml(item) {
+  const track = trackFor(item);
+  return `
+    <article class="card" tabindex="0" role="button" data-open="${item.id}">
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="type-pill">${item.type}</span>
+          ${track ? `<span class="track-pill">${track[lang]}</span>` : ""}
+        </div>
+        <h3>${item.title[lang]}</h3>
+        <p>${item.summary[lang]}</p>
+        <div class="tag-row">${item.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
+        <button type="button" data-open="${item.id}">${t("open")}</button>
+      </div>
+    </article>
+  `;
 }
 
 function renderInline(text, basePath) {
@@ -564,30 +639,38 @@ function renderCards() {
   const items = filteredItems();
   const sectionItems = content.filter((item) => item.section === activeSection);
   renderStats(sectionItems);
+  grid.classList.toggle("grouped-grid", activeSection === "product-sense");
 
   if (!items.length) {
     grid.innerHTML = `<div class="empty-state">${t("comingSoon")}</div>`;
     return;
   }
 
-  grid.innerHTML = items.map((item) => `
-    <article class="card" tabindex="0" role="button" data-open="${item.id}">
-      <div class="card-body">
-        <span class="type-pill">${item.type}</span>
-        <h3>${item.title[lang]}</h3>
-        <p>${item.summary[lang]}</p>
-        <div class="tag-row">${item.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
-        <button type="button" data-open="${item.id}">${t("open")}</button>
-      </div>
-    </article>
-  `).join("");
+  if (activeSection === "product-sense") {
+    grid.innerHTML = productSenseTracks.map((track) => {
+      const trackItems = items.filter((item) => item.track === track.id);
+      if (!trackItems.length) return "";
+      return `
+        <section class="track-section">
+          <div class="track-heading">
+            <span>${track[lang]}</span>
+            <p>${track[`${lang}Desc`]}</p>
+          </div>
+          <div class="track-grid">${trackItems.map(cardHtml).join("")}</div>
+        </section>
+      `;
+    }).join("");
+    return;
+  }
+
+  grid.innerHTML = items.map(cardHtml).join("");
 }
 
 async function openItem(id) {
   const item = content.find((entry) => entry.id === id);
   if (!item) return;
   const source = sourceFor(item);
-  readerType.textContent = item.type;
+  readerType.textContent = trackFor(item) ? `${item.type} · ${trackLabel(item)}` : item.type;
   readerTitle.textContent = item.title[lang];
   readerBody.innerHTML = `<p>${t("loading")}</p>`;
   contentPane.classList.add("reading-mode");
@@ -630,7 +713,7 @@ function render() {
     const id = window.location.hash.replace("#note=", "");
     const item = content.find((entry) => entry.id === id);
     if (item) {
-      readerType.textContent = item.type;
+      readerType.textContent = trackFor(item) ? `${item.type} · ${trackLabel(item)}` : item.type;
       readerTitle.textContent = item.title[lang];
     }
   }
