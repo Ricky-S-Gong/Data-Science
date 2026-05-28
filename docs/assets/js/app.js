@@ -1,5 +1,5 @@
 const REPO_RAW_BASE = "https://raw.githubusercontent.com/Ricky-S-Gong/Data-Science/main/";
-const ASSET_VERSION = "20260527-email-campaign-ab-v1";
+const ASSET_VERSION = "20260527-facebook-dau-v1";
 
 const sections = [
   {
@@ -196,6 +196,22 @@ const content = [
     summary: {
       en: "Practice case for launching Slack Connect and choosing a North Star, supporting metrics, and guardrails.",
       zh: "练习案例：为 Slack Connect 设计发布策略、北极星指标、补充指标和护栏指标。"
+    }
+  },
+  {
+    id: "improving-facebook-dau",
+    section: "product-sense",
+    type: "practice",
+    source: {
+      en: "product-sense/02-question-bank/metrics/improving-facebooks-dau.en.md",
+      zh: "product-sense/02-question-bank/metrics/improving-facebooks-dau.zh.md"
+    },
+    image: "",
+    tags: ["Facebook", "DAU", "GAME"],
+    title: { en: "Improving Facebook's DAU", zh: "提升 Facebook 的日活跃用户数" },
+    summary: {
+      en: "Practice answer for improving Facebook DAU through user loops, metrics, experiments, and guardrails.",
+      zh: "练习答案：通过用户循环、指标、实验和护栏指标提升 Facebook DAU。"
     }
   },
   {
