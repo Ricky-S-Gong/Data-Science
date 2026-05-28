@@ -1,5 +1,5 @@
 const REPO_RAW_BASE = "https://raw.githubusercontent.com/Ricky-S-Gong/Data-Science/main/";
-const ASSET_VERSION = "20260527-google-homepage-ab-v1";
+const ASSET_VERSION = "20260527-uber-pickup-v1";
 
 const sections = [
   {
@@ -148,6 +148,22 @@ const content = [
     summary: {
       en: "Practice case for proposing A/B tests on Google’s mobile homepage to increase search traffic.",
       zh: "练习案例：为 Google 移动端主页设计 A/B 测试，以提升搜索流量。"
+    }
+  },
+  {
+    id: "uber-passenger-pickup-variables",
+    section: "product-sense",
+    type: "practice",
+    source: {
+      en: "product-sense/02-question-bank/metrics/ubers-passenger-pickup-variables.en.md",
+      zh: "product-sense/02-question-bank/metrics/ubers-passenger-pickup-variables.zh.md"
+    },
+    image: "",
+    tags: ["Uber", "ETA", "variables"],
+    title: { en: "Top 3 Variables for Uber Passenger Pickup ETA", zh: "Uber 接客 ETA 的三大关键变量" },
+    summary: {
+      en: "Practice case for ranking variables Uber could use beyond Google Maps ETA to estimate passenger pickup time.",
+      zh: "练习案例：排序 Uber 在 Google Maps ETA 之外可用于估算接客时间的关键变量。"
     }
   },
   {
