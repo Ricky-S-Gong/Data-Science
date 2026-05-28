@@ -1,5 +1,5 @@
 const REPO_RAW_BASE = "https://raw.githubusercontent.com/Ricky-S-Gong/Data-Science/main/";
-const ASSET_VERSION = "20260527-facebook-dau-v1";
+const ASSET_VERSION = "20260528-instagram-dau-drop-v1";
 
 const sections = [
   {
@@ -212,6 +212,22 @@ const content = [
     summary: {
       en: "Practice answer for improving Facebook DAU through user loops, metrics, experiments, and guardrails.",
       zh: "练习答案：通过用户循环、指标、实验和护栏指标提升 Facebook DAU。"
+    }
+  },
+  {
+    id: "diagnosing-instagram-dau-drop",
+    section: "product-sense",
+    type: "practice",
+    source: {
+      en: "product-sense/02-question-bank/metrics/diagnosing-instagram-dau-drop.en.md",
+      zh: "product-sense/02-question-bank/metrics/diagnosing-instagram-dau-drop.zh.md"
+    },
+    image: "",
+    tags: ["Instagram", "DAU", "diagnosis"],
+    title: { en: "Diagnosing Instagram DAU Drop", zh: "分析 Instagram 日活跃用户下降" },
+    summary: {
+      en: "Practice answer for diagnosing a 5% Instagram DAU drop through data validation, segmentation, metrics, and root cause analysis.",
+      zh: "练习答案：通过数据验证、分群、支持指标和根因分析诊断 Instagram DAU 下降。"
     }
   },
   {
