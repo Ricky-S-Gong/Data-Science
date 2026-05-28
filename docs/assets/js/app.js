@@ -181,7 +181,7 @@ const content = [
 
 const i18n = {
   en: {
-    siteEyebrow: "Public Interview Library",
+    siteEyebrow: "One Home for DS Interviews",
     siteTitle: "Data Science Interview Prep",
     searchPlaceholder: "Search notes, frameworks, cases...",
     heroEyebrow: "Current Focus",
@@ -202,7 +202,7 @@ const i18n = {
     backToLibrary: "Back to library"
   },
   zh: {
-    siteEyebrow: "公开面试知识库",
+    siteEyebrow: "一个网站解决 DS 面试",
     siteTitle: "Data Science 面试复习",
     searchPlaceholder: "搜索笔记、框架、案例...",
     heroEyebrow: "当前重点",
