@@ -1,5 +1,5 @@
 const REPO_RAW_BASE = "https://raw.githubusercontent.com/Ricky-S-Gong/Data-Science/main/";
-const ASSET_VERSION = "20260527-course-structure-v1";
+const ASSET_VERSION = "20260527-google-homepage-ab-v1";
 
 const sections = [
   {
@@ -132,6 +132,22 @@ const content = [
     summary: {
       en: "Full practice answer for choosing three YouTube Analytics metrics and defending tradeoffs.",
       zh: "完整练习答案：为 YouTube Analytics 选择三个指标并解释取舍。"
+    }
+  },
+  {
+    id: "google-homepage-ab-test",
+    section: "product-sense",
+    type: "practice",
+    source: {
+      en: "product-sense/02-question-bank/ab-testing/ab-test-googles-homepage.en.md",
+      zh: "product-sense/02-question-bank/ab-testing/ab-test-googles-homepage.zh.md"
+    },
+    image: "product-sense/assets/images/analytical-questions/exercises/google-homepage-shortcut-links.png",
+    tags: ["Google", "A/B test", "homepage"],
+    title: { en: "A/B Test Google's Homepage", zh: "对 Google 主页进行 A/B 测试" },
+    summary: {
+      en: "Practice case for proposing A/B tests on Google’s mobile homepage to increase search traffic.",
+      zh: "练习案例：为 Google 移动端主页设计 A/B 测试，以提升搜索流量。"
     }
   },
   {
