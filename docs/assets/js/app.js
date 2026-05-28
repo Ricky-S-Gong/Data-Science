@@ -1,4 +1,5 @@
 const REPO_RAW_BASE = "https://raw.githubusercontent.com/Ricky-S-Gong/Data-Science/main/";
+const ASSET_VERSION = "20260527-full-reader";
 
 const sections = [
   {
@@ -175,6 +176,8 @@ const i18n = {
     loading: "Loading the full note...",
     sourceLabel: "Source file",
     pdfLabel: "Open PDF"
+    ,
+    backToLibrary: "Back to library"
   },
   zh: {
     siteEyebrow: "公开面试知识库",
@@ -195,7 +198,8 @@ const i18n = {
     imageMissing: "加入原始图片文件后，这里会显示图片。",
     loading: "正在加载完整笔记...",
     sourceLabel: "源文件",
-    pdfLabel: "打开 PDF"
+    pdfLabel: "打开 PDF",
+    backToLibrary: "返回目录"
   }
 };
 
@@ -206,13 +210,15 @@ let search = "";
 
 const nav = document.querySelector("#sectionNav");
 const grid = document.querySelector("#cardsGrid");
+const heroPanel = document.querySelector(".hero-panel");
+const tabs = document.querySelector(".tabs");
 const searchInput = document.querySelector("#searchInput");
 const languageToggle = document.querySelector("#languageToggle");
-const detailDialog = document.querySelector("#detailDialog");
-const closeDialog = document.querySelector("#closeDialog");
-const dialogType = document.querySelector("#dialogType");
-const dialogTitle = document.querySelector("#dialogTitle");
-const dialogBody = document.querySelector("#dialogBody");
+const readerPane = document.querySelector("#readerPane");
+const readerType = document.querySelector("#readerType");
+const readerTitle = document.querySelector("#readerTitle");
+const readerBody = document.querySelector("#readerBody");
+const backToLibrary = document.querySelector("#backToLibrary");
 
 function t(key) {
   return i18n[lang][key];
@@ -220,6 +226,10 @@ function t(key) {
 
 function rawUrl(path) {
   return `${REPO_RAW_BASE}${path}`;
+}
+
+function versionedRawUrl(path) {
+  return `${rawUrl(path)}?v=${ASSET_VERSION}`;
 }
 
 function escapeHtml(value) {
@@ -247,7 +257,7 @@ function resolveRepoPath(basePath, relativePath) {
 }
 
 function resolveImageUrl(basePath, relativePath) {
-  return rawUrl(resolveRepoPath(basePath, relativePath));
+  return versionedRawUrl(resolveRepoPath(basePath, relativePath));
 }
 
 function renderInline(text, basePath) {
@@ -418,7 +428,7 @@ function imageMarkup(item) {
   if (!item.image) {
     return `<div class="image-placeholder">${t("imageMissing")}</div>`;
   }
-  return `<img src="${rawUrl(item.image)}" alt="${item.title[lang]}" onerror="this.replaceWith(Object.assign(document.createElement('div'), {className: 'image-placeholder', textContent: '${t("imageMissing")}'}))" />`;
+  return `<img src="${versionedRawUrl(item.image)}" alt="${item.title[lang]}" onerror="this.replaceWith(Object.assign(document.createElement('div'), {className: 'image-placeholder', textContent: '${t("imageMissing")}'}))" />`;
 }
 
 function filteredItems() {
@@ -463,22 +473,37 @@ function renderCards() {
 async function openItem(id) {
   const item = content.find((entry) => entry.id === id);
   if (!item) return;
-  dialogType.textContent = item.type;
-  dialogTitle.textContent = item.title[lang];
-  dialogBody.innerHTML = `<p>${t("loading")}</p>`;
-  detailDialog.showModal();
+  readerType.textContent = item.type;
+  readerTitle.textContent = item.title[lang];
+  readerBody.innerHTML = `<p>${t("loading")}</p>`;
+  heroPanel.hidden = true;
+  tabs.hidden = true;
+  grid.hidden = true;
+  readerPane.hidden = false;
+  window.location.hash = `note=${item.id}`;
+  window.scrollTo({ top: 0, behavior: "smooth" });
 
   try {
-    const response = await fetch(rawUrl(item.source));
+    const response = await fetch(versionedRawUrl(item.source), { cache: "no-store" });
     if (!response.ok) throw new Error(`Unable to load ${item.source}`);
     const markdown = await response.text();
-    dialogBody.innerHTML = `
+    readerBody.innerHTML = `
       <div class="source-link">${t("sourceLabel")}: <code>${item.source}</code></div>
-      ${item.pdf ? `<a class="pdf-link" href="${rawUrl(item.pdf)}" target="_blank" rel="noreferrer">${t("pdfLabel")}</a>` : ""}
+      ${item.pdf ? `<a class="pdf-link" href="${versionedRawUrl(item.pdf)}" target="_blank" rel="noreferrer">${t("pdfLabel")}</a>` : ""}
       ${markdownToHtml(markdown, item.source)}
     `;
   } catch (error) {
-    dialogBody.innerHTML = `<div class="callout note"><strong>Load error</strong><p>${escapeHtml(error.message)}</p></div>`;
+    readerBody.innerHTML = `<div class="callout note"><strong>Load error</strong><p>${escapeHtml(error.message)}</p></div>`;
+  }
+}
+
+function closeReader() {
+  readerPane.hidden = true;
+  heroPanel.hidden = false;
+  tabs.hidden = false;
+  grid.hidden = false;
+  if (window.location.hash.startsWith("#note=")) {
+    history.pushState("", document.title, window.location.pathname + window.location.search);
   }
 }
 
@@ -486,6 +511,14 @@ function render() {
   applyLanguage();
   renderNav();
   renderCards();
+  if (!readerPane.hidden) {
+    const id = window.location.hash.replace("#note=", "");
+    const item = content.find((entry) => entry.id === id);
+    if (item) {
+      readerType.textContent = item.type;
+      readerTitle.textContent = item.title[lang];
+    }
+  }
 }
 
 nav.addEventListener("click", (event) => {
@@ -493,6 +526,7 @@ nav.addEventListener("click", (event) => {
   if (!button) return;
   activeSection = button.dataset.section;
   activeFilter = "all";
+  closeReader();
   document.querySelectorAll(".tab").forEach((tab) => tab.classList.toggle("active", tab.dataset.filter === "all"));
   render();
 });
@@ -521,6 +555,16 @@ languageToggle.addEventListener("click", () => {
   render();
 });
 
-closeDialog.addEventListener("click", () => detailDialog.close());
+backToLibrary.addEventListener("click", closeReader);
+
+window.addEventListener("hashchange", () => {
+  const id = window.location.hash.replace("#note=", "");
+  if (id) openItem(id);
+});
 
 render();
+
+const initialNoteId = window.location.hash.startsWith("#note=") ? window.location.hash.replace("#note=", "") : "";
+if (initialNoteId) {
+  openItem(initialNoteId);
+}

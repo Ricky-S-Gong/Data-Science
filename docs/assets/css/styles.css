@@ -111,7 +111,8 @@ h1 {
 .language-toggle,
 .tab,
 .card button,
-.icon-button {
+.icon-button,
+.secondary-button {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
@@ -328,31 +329,35 @@ h1 {
   color: white;
 }
 
-.detail-dialog {
-  width: min(1180px, calc(100vw - 2rem));
-  max-height: min(86vh, 900px);
+.reader-pane {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
-  color: var(--ink);
   box-shadow: var(--shadow);
 }
 
-.detail-dialog::backdrop {
-  background: rgba(33, 49, 43, 0.34);
-}
-
-.dialog-header {
+.reader-toolbar {
+  position: sticky;
+  top: 77px;
+  z-index: 4;
   display: flex;
-  align-items: start;
-  justify-content: space-between;
+  align-items: center;
   gap: 1rem;
   border-bottom: 1px solid var(--line);
   padding: 1rem 1.25rem;
+  background: rgba(255, 253, 246, 0.94);
+  backdrop-filter: blur(14px);
 }
 
-.dialog-header h2 {
+.reader-toolbar h2 {
   margin-bottom: 0;
+}
+
+.secondary-button {
+  padding: 0.7rem 0.85rem;
+  background: var(--surface-2);
+  font-weight: 800;
+  white-space: nowrap;
 }
 
 .icon-button {
@@ -362,12 +367,11 @@ h1 {
   line-height: 1;
 }
 
-.dialog-body {
-  padding: 1.25rem;
-  overflow: auto;
+.reader-body {
+  padding: 1.5rem;
 }
 
-.dialog-body img {
+.reader-body img {
   display: block;
   max-width: 100%;
   margin: 0 0 1rem;
@@ -400,8 +404,8 @@ h1 {
   margin-bottom: 0.45rem;
 }
 
-.dialog-body ul,
-.dialog-body ol {
+.reader-body ul,
+.reader-body ol {
   line-height: 1.7;
 }
 
@@ -427,7 +431,7 @@ h1 {
 }
 
 .markdown-body {
-  max-width: 920px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
