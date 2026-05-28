@@ -203,7 +203,7 @@ const i18n = {
   },
   zh: {
     siteEyebrow: "一个网站解决 DS 面试",
-    siteTitle: "Data Science 面试复习",
+    siteTitle: "Data Science 面试宝典",
     searchPlaceholder: "搜索笔记、框架、案例...",
     heroEyebrow: "当前重点",
     heroTitle: "产品感与案例分析",
