@@ -166,7 +166,6 @@ const i18n = {
     lessonsLabel: "Lessons",
     cheatsheetsLabel: "Cheatsheets",
     practiceLabel: "Practice",
-    tabAll: "All",
     tabLessons: "Lessons",
     tabPractice: "Practice",
     tabCheatsheets: "Cheatsheets",
@@ -189,7 +188,6 @@ const i18n = {
     lessonsLabel: "课程",
     cheatsheetsLabel: "Cheatsheet",
     practiceLabel: "练习",
-    tabAll: "全部",
     tabLessons: "课程",
     tabPractice: "练习",
     tabCheatsheets: "Cheatsheet",
@@ -205,11 +203,12 @@ const i18n = {
 
 let lang = "en";
 let activeSection = "product-sense";
-let activeFilter = "all";
+let activeFilter = "lesson";
 let search = "";
 
 const nav = document.querySelector("#sectionNav");
 const grid = document.querySelector("#cardsGrid");
+const contentPane = document.querySelector(".content");
 const heroPanel = document.querySelector(".hero-panel");
 const tabs = document.querySelector(".tabs");
 const searchInput = document.querySelector("#searchInput");
@@ -434,7 +433,7 @@ function imageMarkup(item) {
 function filteredItems() {
   return content.filter((item) => {
     const matchesSection = item.section === activeSection;
-    const matchesFilter = activeFilter === "all" || item.type === activeFilter;
+    const matchesFilter = item.type === activeFilter;
     const haystack = [
       item.title.en,
       item.title.zh,
@@ -457,14 +456,14 @@ function renderCards() {
   }
 
   grid.innerHTML = items.map((item) => `
-    <article class="card">
+    <article class="card" tabindex="0" role="button" data-open="${item.id}">
       <div class="card-media">${imageMarkup(item)}</div>
       <div class="card-body">
         <span class="type-pill">${item.type}</span>
         <h3>${item.title[lang]}</h3>
         <p>${item.summary[lang]}</p>
         <div class="tag-row">${item.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
-        <button type="button" data-open="${item.id}">${t("open")}</button>
+        <button type="button">${t("open")}</button>
       </div>
     </article>
   `).join("");
@@ -476,9 +475,7 @@ async function openItem(id) {
   readerType.textContent = item.type;
   readerTitle.textContent = item.title[lang];
   readerBody.innerHTML = `<p>${t("loading")}</p>`;
-  heroPanel.hidden = true;
-  tabs.hidden = true;
-  grid.hidden = true;
+  contentPane.classList.add("reading-mode");
   readerPane.hidden = false;
   window.location.hash = `note=${item.id}`;
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -499,9 +496,7 @@ async function openItem(id) {
 
 function closeReader() {
   readerPane.hidden = true;
-  heroPanel.hidden = false;
-  tabs.hidden = false;
-  grid.hidden = false;
+  contentPane.classList.remove("reading-mode");
   if (window.location.hash.startsWith("#note=")) {
     history.pushState("", document.title, window.location.pathname + window.location.search);
   }
@@ -525,9 +520,9 @@ nav.addEventListener("click", (event) => {
   const button = event.target.closest("[data-section]");
   if (!button) return;
   activeSection = button.dataset.section;
-  activeFilter = "all";
+  activeFilter = "lesson";
   closeReader();
-  document.querySelectorAll(".tab").forEach((tab) => tab.classList.toggle("active", tab.dataset.filter === "all"));
+  document.querySelectorAll(".tab").forEach((tab) => tab.classList.toggle("active", tab.dataset.filter === "lesson"));
   render();
 });
 
@@ -540,9 +535,17 @@ document.querySelector(".tabs").addEventListener("click", (event) => {
 });
 
 grid.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-open]");
-  if (!button) return;
-  openItem(button.dataset.open);
+  const card = event.target.closest("[data-open]");
+  if (!card) return;
+  openItem(card.dataset.open);
+});
+
+grid.addEventListener("keydown", (event) => {
+  if (event.key !== "Enter" && event.key !== " ") return;
+  const card = event.target.closest("[data-open]");
+  if (!card) return;
+  event.preventDefault();
+  openItem(card.dataset.open);
 });
 
 searchInput.addEventListener("input", (event) => {
