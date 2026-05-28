@@ -1,5 +1,5 @@
 const REPO_RAW_BASE = "https://raw.githubusercontent.com/Ricky-S-Gong/Data-Science/main/";
-const ASSET_VERSION = "20260527-reader-v2";
+const ASSET_VERSION = "20260527-assets-v1";
 
 const sections = [
   {
@@ -423,13 +423,6 @@ function renderStats(items) {
   document.querySelector("#practiceCount").textContent = items.filter((item) => item.type === "practice").length;
 }
 
-function imageMarkup(item) {
-  if (!item.image) {
-    return `<div class="image-placeholder">${t("imageMissing")}</div>`;
-  }
-  return `<img src="${versionedRawUrl(item.image)}" alt="${item.title[lang]}" onerror="this.replaceWith(Object.assign(document.createElement('div'), {className: 'image-placeholder', textContent: '${t("imageMissing")}'}))" />`;
-}
-
 function filteredItems() {
   return content.filter((item) => {
     const matchesSection = item.section === activeSection;
@@ -457,7 +450,6 @@ function renderCards() {
 
   grid.innerHTML = items.map((item) => `
     <article class="card" tabindex="0" role="button" data-open="${item.id}">
-      <div class="card-media">${imageMarkup(item)}</div>
       <div class="card-body">
         <span class="type-pill">${item.type}</span>
         <h3>${item.title[lang]}</h3>

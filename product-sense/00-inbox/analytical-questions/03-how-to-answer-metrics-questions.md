@@ -38,7 +38,7 @@ Expected paths:
 - `product-sense/assets/images/analytical-questions/metrics/whiteboard-4-metrics.png`
 - `product-sense/assets/images/analytical-questions/metrics/whiteboard-5-evaluate.png`
 
-![GAME framework](../../../assets/images/analytical-questions/metrics/game-framework.png)
+![GAME framework](../../assets/images/analytical-questions/metrics/game-framework.png)
 
 ## Core Summary
 
@@ -160,7 +160,7 @@ How to Answer Metrics Questions Framework
 
 图片一
 
-![GAME framework](../../../assets/images/analytical-questions/metrics/game-framework.png)
+![GAME framework](../../assets/images/analytical-questions/metrics/game-framework.png)
 
 #### 中文润色
 
@@ -224,7 +224,7 @@ Let’s assume the interviewer says that you should consider Meta’s goals and 
 
 图片二
 
-![Metrics whiteboard: clarify](../../../assets/images/analytical-questions/metrics/whiteboard-1-clarify.png)
+![Metrics whiteboard: clarify](../../assets/images/analytical-questions/metrics/whiteboard-1-clarify.png)
 
 #### 中文润色
 
@@ -283,7 +283,7 @@ For now, I’ll claim that the goal of the Discover feed is “Help users develo
 
 图片三
 
-![Metrics whiteboard: goals](../../../assets/images/analytical-questions/metrics/whiteboard-2-goals.png)
+![Metrics whiteboard: goals](../../assets/images/analytical-questions/metrics/whiteboard-2-goals.png)
 
 #### 中文润色
 
@@ -387,7 +387,7 @@ Search for related topicsHow to Answer Metrics Questions Whiteboard 3
 
 图片四
 
-![Metrics whiteboard: actions](../../../assets/images/analytical-questions/metrics/whiteboard-3-actions.png)
+![Metrics whiteboard: actions](../../assets/images/analytical-questions/metrics/whiteboard-3-actions.png)
 
 #### 中文润色
 
@@ -542,7 +542,7 @@ Each of these options tells me something slightly different. Returning to my sta
 
 图片五
 
-![Metrics whiteboard: metrics](../../../assets/images/analytical-questions/metrics/whiteboard-4-metrics.png)
+![Metrics whiteboard: metrics](../../assets/images/analytical-questions/metrics/whiteboard-4-metrics.png)
 
 #### 中文润色
 
@@ -613,7 +613,7 @@ Ideally, I would like to couple time spent with a counter metric that measures a
 
 图片六
 
-![Metrics whiteboard: evaluate](../../../assets/images/analytical-questions/metrics/whiteboard-5-evaluate.png)
+![Metrics whiteboard: evaluate](../../assets/images/analytical-questions/metrics/whiteboard-5-evaluate.png)
 
 #### 中文润色
 

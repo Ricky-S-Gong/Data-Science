@@ -25,7 +25,7 @@ Expected path:
 
 - `product-sense/assets/images/analytical-questions/rubrics/analytical-rubric.png`
 
-![Analytical Rubric](../../../assets/images/analytical-questions/rubrics/analytical-rubric.png)
+![Analytical Rubric](../../assets/images/analytical-questions/rubrics/analytical-rubric.png)
 
 ## Core Summary
 

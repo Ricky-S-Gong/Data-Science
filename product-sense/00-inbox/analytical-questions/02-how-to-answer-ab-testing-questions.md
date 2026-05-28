@@ -23,7 +23,7 @@ Exponent lesson: How to Answer A/B Testing Questions
 
 Image asset:
 
-![How to Answer A/B Testing Questions](../../../assets/images/analytical-questions/how-to-answer-ab-testing-questions.png)
+![How to Answer A/B Testing Questions](../../assets/images/analytical-questions/how-to-answer-ab-testing-questions.png)
 
 Note: use the original image provided with this lesson for the future website. If the image is not yet present in the repo, place it at `product-sense/assets/images/analytical-questions/how-to-answer-ab-testing-questions.png`.
 
