@@ -19,7 +19,7 @@ A strong answer should move from problem framing to goals, then to data, metrics
 
 Analytical PM interview questions test whether you can break down problems, set goals, reason with data, and make logically justified decisions. Strong answers should not stop at metrics or calculations. They should connect the analysis back to product context, user needs, business goals, and strategic tradeoffs.
 
-## Lesson Notes
+## Course
 
 ### Opening Definition
 

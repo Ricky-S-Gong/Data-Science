@@ -18,7 +18,7 @@ This lesson is about how analytical answers are evaluated. A strong candidate do
 
 Analytical interviews are scored across analytical skills, critical thinking, and culture fit. The strongest candidates do more than reach a correct answer: they use data, choose metrics thoughtfully, diagnose problems, prioritize effectively, execute a clear plan, communicate proactively, collaborate with the interviewer, and show genuine curiosity.
 
-## Lesson Notes
+## Course
 
 ### Opening
 

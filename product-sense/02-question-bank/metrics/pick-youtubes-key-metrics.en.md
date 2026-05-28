@@ -1,129 +1,101 @@
 # Pick YouTube’s Key Metrics
 
 ## Key Terms
-- PM: Product Manager.
-- North star metric: A metric that captures the core value of a product and can serve as a rough test of success.
-- GAME framework: A metrics-answer framework. The full version is Clarify, Goals, Actions, Metrics, Evaluate. This practice mainly uses Goals, Actions, Metrics, Evaluate.
-- Sentiment analysis: A natural language processing method used to determine whether text is positive, negative, or neutral.
-- Watch time: The amount of time users spend watching videos.
 
-## Core Review
+| Term | Meaning |
+| --- | --- |
+| PM | Product Manager. |
+| North star metric | A metric that captures the core value of a product and can serve as a rough test of success. |
+| GAME framework | Clarify, Goals, Actions, Metrics, Evaluate. This practice mainly uses Goals, Actions, Metrics, Evaluate. |
+| Sentiment analysis | A natural language processing method used to determine whether text is positive, negative, or neutral. |
+| Watch time | The amount of time users spend watching videos. |
 
-This is not a question about memorizing YouTube’s official metrics. It tests whether you can define a product goal, identify the user actions that support the goal, translate those actions into precise metrics, and evaluate tradeoffs.
+## Question
 
-Metrics question
+You are the PM of YouTube Analytics. What would you pick as the three key metrics, and why?
 
-GAME framework:
-
-- Goals
-- Actions
-- Metrics
-- Evaluate
-
-Note: This practice solution uses GAME without an explicit Clarify step. In an actual interview, briefly clarify scope first.
+Like many PM questions, this does not have a single correct answer. Give a reasonable answer and defend the perspective.
 
 ![YouTube key metrics exercise screenshot](../../assets/images/analytical-questions/exercises/youtube-key-metrics.png)
 
-## Lesson Notes
+## How To Approach It
 
-### Question
+This is a product management metrics question. There is rarely one universally best metric to optimize. Product managers often call the most important metric or metrics a product’s north star metric because they capture the product’s core value and provide a rough test of success.
 
-Pick YouTube's Key Metrics
+This solution uses GAME:
 
-Question
+| Step | Role in this answer |
+| --- | --- |
+| Goals | Define what YouTube is trying to accomplish. |
+| Actions | Identify user behaviors that support that goal. |
+| Metrics | Convert those behaviors into measurable indicators. |
+| Evaluate | Discuss false positives, false negatives, and tradeoffs. |
 
-You’re the PM of YouTube’s Analytics. What would you pick as the three key metrics, and why?
+In a real interview, briefly clarify scope before starting. For example: “Should I focus on YouTube Analytics for creators, or YouTube as a viewing platform?” This provided solution treats the prompt as measuring YouTube platform engagement.
 
-As with many PM questions, this one doesn’t have a single answer. Give a reasonable answer and defend your perspective.
+## Goal
 
-### Solution: Approach
+YouTube has several reasonable goals:
 
-Solution
+- User retention.
+- User engagement.
+- More video upload time.
+- Monetization through YouTube Premium or ads.
 
-Approach
+For this answer, choose user engagement. YouTube wants users to get meaningful value from entertaining and educational video content.
 
-This is a typical product management metrics question. Generally, there's never any single metric that's the best metric to optimize for. Product managers often name these top metrics their product's "north star" metrics. North star metrics are metrics that capture the core value of your product, and are worth using as a rough litmus test for the success of your product.
+Revenue is usually not the best first goal. A company that focuses only on revenue can miss the fact that user experience is often the stronger long-term health metric. First deliver a worthwhile experience; then evaluate monetization.
 
-In this question, let's use the GAME framework, which is quite simple and effective. We want to:
+## Actions
 
-Goal: Define goals for the product. What is our product vision? Where do we see the product growing in the next five years? For example, if we're working at Whatsapp, perhaps our overall goal is to see the platform grow in terms of user retention. We want to ensure that users who visit our platform discover useful features and stay on the platform.
+User actions that could indicate engagement include:
 
-Actions: What actions do we want our users to take that support these goals? For instance, which features or actions drive engagement? Maybe we want our users to send at least one message per day, since these users often stay on the platform for several months. Another reasonable action to consider here is payment - how many users upgrade their accounts?
+- Liking videos.
+- Watching videos.
+- Commenting on videos.
+- Clicking video thumbnails.
+- Adding videos to playlists.
+- Creating playlists.
+- Visiting YouTube pages.
 
-Metrics: Now that we've clarified our actions of interest, let's discuss which metrics capture these actions. For example, we can track the number of users that upgrade their account to premium, or the number of users who send one message per day for one week. Tracking these metrics helps indicate to us if our users are taking the Actions that align with our product's Goals.
+Analyze actions before jumping into metrics. Otherwise, it is easy to skip the reasoning that connects product goals to metric choices.
 
-Evaluate: Of course, as with most PM questions, reflect after you deliver your answer. How might this metric be a false-positive or false-negative? What are some cases where your defined metrics may show positive, but cause deleterious effects for the platform? For instance, perhaps users are upgrading their accounts to premium, but then, after a few days, refunding their purchase because of dissatisfaction with the premium account. These false-positives or false-negatives don't mean that your answer is wrong - it's just always worth mentioning the tradeoffs and potential areas of concern with your selected metric. In fact, no single metric will ever be foolproof!
+## Metrics
 
-### Goal
+The strongest actions for this prompt are:
 
-Goal
+- Watching videos.
+- Liking videos.
+- Commenting on videos.
 
-First, let's define the overall goal for YouTube as a company. There are a variety of goals we can select, and they would all be great answers. Overall, YouTube's goal is to provide entertaining and educational video content to users. YouTube also has a subscription plan, called YouTube Premium, that charges users a monthly subscription fee to access premium and ad-free content. Some reasonable goals include user retention, user engagement, or more video upload time. In this case, we'll select user engagement as the key metric - YouTube wants to see its users getting the most out of the platform.
+Why not the others?
 
-Note: Generally, revenue is NOT a recommended goal. Companies who focus solely on revenue fail to consider that user experience is a more important health metric for the overall company. First and foremost, deliver an incredible and worthwhile user experience. Then, you can consider monetization metrics.
+| Candidate action | Why it is less central |
+| --- | --- |
+| Playlist actions | Useful, but currently more niche and less representative of the platform’s overall health. |
+| Thumbnail clicks | Shows interest, but not whether the user enjoyed the content. |
+| Page visits | Shows traffic, but not meaningful engagement. |
 
-#### Note
+Final three metrics:
 
-Generally, revenue is NOT a recommended goal. Companies who focus solely on revenue fail to consider that user experience is a more important health metric for the overall company. First and foremost, deliver an incredible and worthwhile user experience. Then, you can consider monetization metrics.
+| Metric | What it captures |
+| --- | --- |
+| Average video watch time per user | Content consumption and depth of viewing. |
+| Average number of likes clicked per user | Positive feedback and lightweight appreciation. |
+| Average number of comments per user | Active participation and stronger engagement. |
 
-### Actions
+These are defined as per-user averages to give a clearer sense of user engagement.
 
-Actions
+## Evaluate
 
-So, what user actions align with the goal of user engagement? Here are some to start with:
+The three metrics are useful, but none is perfect.
 
-Likes on videos
-
-Watching videos
-
-Commenting on videos
-
-Clicks on thumbnails of videos
-
-Adding videos to playlists
-
-Creating playlists
-
-Youtube.com domain page visits
-
-All of these are high-level actions that would indicate engagement on the platform. It's important to consider a high-level analysis of actions prior to diving into the nitty gritty metrics, else you may miss important details and skip some steps to clearly explain your answer.
-
-### Metrics
-
-Metrics
-
-Now, our goal is to take some of the above actions, determine which ones are most important to us, and define clear metrics that capture these actions.
-
-In this case, the most desired user actions are likely:
-
-Likes on videos
-
-Watching videos
-
-Commenting on videos
-
-Playlist metrics, while helpful, are a currently niche feature and don't capture the overall health of YouTube as a platform. Clicks and visits are helpful to determine interest, but the other actions (likes, comments, and watches) give a clearer sense that the user enjoyed and engaged with the content. Now, let's re-define the above actions with respect to metrics. It's important to be precise here.
-
-Average number of likes clicked per user
-
-Average video watch time per user
-
-Average number of comments per user
-
-These metrics are defined as averages based on per-user metrics, to give a clear sense of user engagement.
-
-### Evaluate
-
-Evaluate
-
-We've defined three key metrics that give us a sense of actions consistent with our goal of helping YouTube boost its user engagement. Now, let's think of some pitfalls and potential tradeoffs from these metrics to give a complete answer to the interviewer.
-
-One pitfall: comments are not necessarily a positive user metric. While commenting users are engaged users, they may be frustrated, offended, or disgusted with the content they are viewing. To mitigate this concern, it'd be helpful to use sentiment analysis tools for comments to check if these comments are generally positive or negative in nature.
-
-Another pitfall: watch-time isn't necessarily a positive user metric, when taken to the extreme. Of course, it is beneficial to YouTube to have engaged users on the platform, but many users are nearly addicted to their YouTube viewing habits. If users feel like their time spent on YouTube is a waste, or that they can't help but watch YouTube instead of accomplishing their important life tasks, then perhaps YouTube's attractive influence is actually a downside.
+| Metric | Potential pitfall | Guardrail or mitigation |
+| --- | --- | --- |
+| Comments per user | Comments can reflect frustration, offense, or disgust rather than positive engagement. | Use sentiment analysis to separate positive, neutral, and negative comments. |
+| Watch time per user | Extreme watch time can indicate addiction, passive browsing, or time users later regret. | Track user satisfaction, long-term retention, and negative feedback. |
+| Likes per user | Likes can be affected by UI placement, creator prompts, or recommendation exposure. | Pair with quality signals and satisfaction surveys. |
 
 ## 30-Second Answer
 
-I would define YouTube's goal here as driving healthy user engagement around entertaining and educational video content. The key user actions I care about are watching videos, liking videos, and commenting. So my three metrics would be average video watch time per user, average number of likes clicked per user, and average number of comments per user. I would be careful with these because watch time can reflect addiction or passive browsing, and comments can be negative, so I would pair them with guardrails like comment sentiment, user satisfaction, and long-term retention.
-
-youtube, metrics, north-star-metric, game-framework, engagement, watch-time, comments, likes
+I would define YouTube’s goal here as driving healthy user engagement around entertaining and educational video content. The key user actions I care about are watching videos, liking videos, and commenting. My three metrics would be average video watch time per user, average number of likes clicked per user, and average number of comments per user. I would be careful with these because watch time can reflect addiction or passive browsing, and comments can be negative, so I would pair them with guardrails like comment sentiment, user satisfaction, and long-term retention.

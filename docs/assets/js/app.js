@@ -1,5 +1,5 @@
 const REPO_RAW_BASE = "https://raw.githubusercontent.com/Ricky-S-Gong/Data-Science/main/";
-const ASSET_VERSION = "20260527-localized-v1";
+const ASSET_VERSION = "20260527-course-structure-v1";
 
 const sections = [
   {
