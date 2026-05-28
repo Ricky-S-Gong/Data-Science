@@ -1,5 +1,5 @@
 const REPO_RAW_BASE = "https://raw.githubusercontent.com/Ricky-S-Gong/Data-Science/main/";
-const ASSET_VERSION = "20260528-product-design-intro-v1";
+const ASSET_VERSION = "20260528-product-design-framework-v1";
 
 const productSenseTracks = [
   {
@@ -272,6 +272,23 @@ const content = [
     summary: {
       en: "First product design lesson covering question types, interviewer expectations, and what separates okay, good, and great answers.",
       zh: "产品设计第一课：题型、面试官考察点，以及可以、不错、很棒答案的区别。"
+    }
+  },
+  {
+    id: "product-design-answer-framework",
+    section: "product-sense",
+    track: "product-design",
+    type: "lesson",
+    source: {
+      en: "product-sense/00-inbox/product-design-questions/02-how-to-answer-product-design-questions.en.md",
+      zh: "product-sense/00-inbox/product-design-questions/02-how-to-answer-product-design-questions.zh.md"
+    },
+    image: "product-sense/assets/images/product-design-questions/framework/seven-step-framework.svg",
+    tags: ["product design", "framework", "users"],
+    title: { en: "How to Answer Product Design Questions", zh: "如何回答产品设计相关问题" },
+    summary: {
+      en: "Seven-step product design answer framework with the full gym experience example, tips, and common pitfalls.",
+      zh: "产品设计七步答题框架，包含完整健身房案例、答题技巧和常见错误。"
     }
   },
   {

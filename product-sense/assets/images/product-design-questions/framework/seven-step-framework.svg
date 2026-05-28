@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520">
+  <rect width="1600" height="520" fill="#fff"/>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <defs>
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#7967b0" flood-opacity=".18"/>
+      </filter>
+    </defs>
+    <g transform="translate(60 125)">
+      <g fill="#5527e8" filter="url(#shadow)">
+        <path d="M0 45 Q0 25 20 25 H205 L245 100 L205 175 H20 Q0 175 0 155 L28 100 Z"/>
+        <path d="M230 45 Q230 25 250 25 H435 L475 100 L435 175 H250 Q230 175 230 155 L258 100 Z"/>
+        <path d="M460 45 Q460 25 480 25 H665 L705 100 L665 175 H480 Q460 175 460 155 L488 100 Z"/>
+        <path d="M690 45 Q690 25 710 25 H895 L935 100 L895 175 H710 Q690 175 690 155 L718 100 Z"/>
+        <path d="M920 45 Q920 25 940 25 H1125 L1165 100 L1125 175 H940 Q920 175 920 155 L948 100 Z"/>
+        <path d="M1150 45 Q1150 25 1170 25 H1355 L1395 100 L1355 175 H1170 Q1150 175 1150 155 L1178 100 Z"/>
+        <path d="M1380 45 Q1380 25 1400 25 H1585 L1625 100 L1585 175 H1400 Q1380 175 1380 155 L1408 100 Z"/>
+      </g>
+      <g fill="#f2edff" stroke="#b9a5ff" stroke-width="2">
+        <circle cx="120" cy="0" r="48"/><circle cx="350" cy="0" r="48"/><circle cx="580" cy="0" r="48"/>
+        <circle cx="810" cy="0" r="48"/><circle cx="1040" cy="0" r="48"/><circle cx="1270" cy="0" r="48"/>
+        <circle cx="1500" cy="0" r="48"/>
+      </g>
+      <g fill="#2d2d82" font-size="34" font-weight="800">
+        <text x="120" y="13">?</text><text x="350" y="13">U</text><text x="580" y="13">!</text>
+        <text x="810" y="13">💡</text><text x="1040" y="13">👁</text><text x="1270" y="13">⚙</text>
+        <text x="1500" y="13">☷</text>
+      </g>
+      <g fill="#fff" font-size="26" font-weight="800">
+        <text x="120" y="107">Problem</text><text x="350" y="107">Users</text><text x="580" y="107">Pain points</text>
+        <text x="810" y="107">Solutions</text><text x="1040" y="107">Vision</text><text x="1270" y="107">Features</text>
+        <text x="1500" y="107">Summary</text>
+      </g>
+      <g fill="#2d2d82" font-size="27">
+        <text x="120" y="260"><tspan x="120">Clarify the</tspan><tspan x="120" dy="38">problem space</tspan></text>
+        <text x="350" y="260"><tspan x="350">Define user</tspan><tspan x="350" dy="38">subsets</tspan></text>
+        <text x="580" y="260"><tspan x="580">Identify</tspan><tspan x="580" dy="38">user goals</tspan></text>
+        <text x="810" y="247"><tspan x="810">Brainstorm</tspan><tspan x="810" dy="38">solutions to</tspan><tspan x="810" dy="38">pain points</tspan></text>
+        <text x="1040" y="260"><tspan x="1040">Envision</tspan><tspan x="1040" dy="38">long-term impact</tspan></text>
+        <text x="1270" y="260"><tspan x="1270">Prioritize</tspan><tspan x="1270" dy="38">features</tspan></text>
+        <text x="1500" y="260"><tspan x="1500">Recap insights</tspan><tspan x="1500" dy="38">and solutions</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
