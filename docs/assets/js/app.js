@@ -1,5 +1,5 @@
 const REPO_RAW_BASE = "https://raw.githubusercontent.com/Ricky-S-Gong/Data-Science/main/";
-const ASSET_VERSION = "20260528-product-design-framework-v1";
+const ASSET_VERSION = "20260528-product-design-framework-v2";
 
 const productSenseTracks = [
   {
