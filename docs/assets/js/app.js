@@ -1,5 +1,5 @@
 const REPO_RAW_BASE = "https://raw.githubusercontent.com/Ricky-S-Gong/Data-Science/main/";
-const ASSET_VERSION = "20260528-facebook-movies-v1";
+const ASSET_VERSION = "20260528-meta-audio-v1";
 
 const productSenseTracks = [
   {
@@ -306,6 +306,23 @@ const content = [
     summary: {
       en: "Product design practice for creating a Facebook movie experience, prioritizing movie crowdfunding as the MVP.",
       zh: "产品设计练习：为 Facebook 设计电影体验，并将电影众筹作为 MVP 方向。"
+    }
+  },
+  {
+    id: "design-audio-product-for-meta",
+    section: "product-sense",
+    track: "product-design",
+    type: "practice",
+    source: {
+      en: "product-sense/02-question-bank/product-design/design-audio-product-for-meta.en.md",
+      zh: "product-sense/02-question-bank/product-design/design-audio-product-for-meta.zh.md"
+    },
+    image: "",
+    tags: ["Meta", "audio", "Groups"],
+    title: { en: "Design Audio Product for Meta", zh: "为 Meta 设计音频产品" },
+    summary: {
+      en: "Product design practice that critiques a generic audio answer and reframes the product around Meta-specific community audio.",
+      zh: "产品设计练习：点评泛音频答案，并将方案重新锚定到 Meta 的社区音频场景。"
     }
   },
   {
