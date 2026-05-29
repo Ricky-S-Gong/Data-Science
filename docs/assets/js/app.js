@@ -1,5 +1,5 @@
 const REPO_RAW_BASE = "https://raw.githubusercontent.com/Ricky-S-Gong/Data-Science/main/";
-const ASSET_VERSION = "20260528-product-design-framework-v2";
+const ASSET_VERSION = "20260528-facebook-movies-v1";
 
 const productSenseTracks = [
   {
@@ -289,6 +289,23 @@ const content = [
     summary: {
       en: "Seven-step product design answer framework with the full gym experience example, tips, and common pitfalls.",
       zh: "产品设计七步答题框架，包含完整健身房案例、答题技巧和常见错误。"
+    }
+  },
+  {
+    id: "design-facebook-movies",
+    section: "product-sense",
+    track: "product-design",
+    type: "practice",
+    source: {
+      en: "product-sense/02-question-bank/product-design/design-facebook-movies.en.md",
+      zh: "product-sense/02-question-bank/product-design/design-facebook-movies.zh.md"
+    },
+    image: "",
+    tags: ["Facebook", "movies", "product design"],
+    title: { en: "Design Facebook Movies", zh: "设计 Facebook 电影功能" },
+    summary: {
+      en: "Product design practice for creating a Facebook movie experience, prioritizing movie crowdfunding as the MVP.",
+      zh: "产品设计练习：为 Facebook 设计电影体验，并将电影众筹作为 MVP 方向。"
     }
   },
   {
