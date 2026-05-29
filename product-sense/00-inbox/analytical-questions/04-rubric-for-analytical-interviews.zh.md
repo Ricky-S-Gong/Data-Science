@@ -1,8 +1,8 @@
 # 分析类面试评分标准
 
 ## 关键术语
-- PM：产品经理。
-- KPI：关键绩效指标。
+- 产品经理（PM，Product Manager）。
+- 关键绩效指标（KPI，Key Performance Indicator）。
 - 数据素养：理解、分析和使用数据得出合理结论的能力。
 - 文化契合度：候选人与公司工作方式、沟通方式、价值观和协作习惯的匹配程度。
 - 批判性思维：诊断问题、分析原因、评估优先级并制定行动计划的能力。
@@ -25,9 +25,9 @@ Note：如果想更详细了解 Exponent 的面试评分标准如何运作，可
 
 现在你已经知道如何回答分析类问题了，接下来看看这些回答是如何被评分的。
 
-PM Analytical Rubric
+产品经理分析面试评分标准（PM Analytical Rubric）
 
-图片一是分析类 PM 面试的 rubric 总览。
+图片一是分析类产品经理面试评分标准（rubric）总览。
 
 ### 分析类面试要展示的核心能力
 
@@ -47,7 +47,7 @@ Culture fit signals 包括 communication、collaboration 和 curiosity。
 
 数据素养
 
-处理数据是 PM 的核心能力。面试官会观察你如何分析数据：你是否能识别数据中的 patterns，提出应该运行的 tests，并得出合理结论。
+处理数据是产品经理（PM）的核心能力。面试官会观察你如何分析数据：你是否能识别数据中的模式（patterns），提出应该运行的测试（tests），并得出合理结论。
 
 - Very Weak or Missing：没有使用数据回答问题。
 - Weak：没有识别出数据中明显的 patterns。
@@ -131,7 +131,7 @@ Culture fit signals 包括 communication、collaboration 和 curiosity。
 
 好奇心
 
-PM 必须具备良好的问题解决意识，而这需要 curiosity。面试官希望看到你在努力弄清问题本质时是投入的、有兴趣的。
+产品经理（PM）必须具备良好的问题解决意识，而这需要好奇心（curiosity）。面试官希望看到你在努力弄清问题本质时是投入的、有兴趣的。
 
 - Very Weak or Missing：没有表现出兴趣，或没有提出好问题。
 - Weak：尝试收集信息，但没能直觉判断应该深入哪些关键领域。
